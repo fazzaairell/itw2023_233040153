@@ -19,12 +19,13 @@ h1{
 }
 
 .container{
-    width: 700px;
+    width: 600px;
     background-color: white;
     margin: auto;
     padding: 30px;
     box-shadow: 0 0 3px 3px rbga(0,0,0,.3);
     border-radius: 5px;
+   
     
 }
 .gallery li {
@@ -34,11 +35,13 @@ h1{
     border: 5px solid #f1e82e;
     position: relative;
     float: left;
+    margin-right: 20px;
 }
 .gallery li,
 .gallery li img,
 .gallery li span {
     border-radius: 50%;
+
 }
 
 
@@ -116,8 +119,46 @@ h1{
     animation: zoomDanFade 1s;
 }
 
+.overlay:target .prev, 
+.overlay:target .next {
+    animation: fadeAjah .5s .5s forwards;
+}
+
+
+/* nav */
+.next, .prev {
+   width: 57px; 
+   height: 57px;
+   background-image: url(../img/next/next.jpeg);
+   position: absolute;
+   text-indent: -99999px;
+   top: 40%;
+   margin-left: 50px;
+   opacity: 0;
+}
+
+.prev{
+    background-image: url(../img/next/back.jpeg);
+    margin-left: -100px;
+}
+
+
+
+
+
 
 /* animasi */
+@keyframes fadeAjah {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
 @keyframes zoomDanFade {
     0% {
         transform: scale(0);
