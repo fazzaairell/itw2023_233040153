@@ -41,7 +41,7 @@ nav ul li a:hover {
 
 /* hamburger menu */
 .menu-toggle {
-    display: flex;
+    display: none;
     flex-direction: column;
     height: 20px;
     justify-content: space-between;
@@ -67,6 +67,10 @@ nav ul li a:hover {
     transition: all 0.5s;
 }
 
+.menu-toggle span:hover {
+    background-color: red;
+    color: #fff;
+}
 
 
 /* hamburger menu animation */
@@ -86,7 +90,6 @@ nav ul li a:hover {
 
 }
 .menu-toggle input:checked ~ span:nth-child(3){
-    opacity: 0;
     transform: scale(0);
 }
 
@@ -124,5 +127,6 @@ nav ul li a:hover {
 }
 
 nav.ul.slide {
+    opacity: 1;
     transform: translateX(0);
 }
